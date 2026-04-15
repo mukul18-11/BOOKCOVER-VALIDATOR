@@ -144,6 +144,7 @@ with gr.Blocks() as app:
                 label="Book cover image",
                 type="filepath",
                 height=480,
+                sources=["upload"],
             )
             validate_btn = gr.Button("Validate cover", variant="primary", size="lg")
 
