@@ -150,8 +150,8 @@ with gr.Blocks() as app:
         with gr.Column(scale=1):
             results_html = gr.HTML(label="Validation Results")
 
-    with gr.Accordion("Annotated cover", open=False):
-        annotated_output = gr.Image(label="Annotated cover", height=600)
+    gr.Markdown("### 🔍 Annotated Cover Analysis")
+    annotated_output = gr.Image(label="Annotated cover — green lines: margins | red zone: badge area | blue: detected text | red boxes: violations", height=700)
 
     # Wire up
     validate_btn.click(
