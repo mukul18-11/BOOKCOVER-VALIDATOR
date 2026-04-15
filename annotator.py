@@ -116,7 +116,7 @@ def annotate_cover(image_path: str, results: dict) -> np.ndarray:
         x2, y2 = int(word["max_x"]), int(word["max_y"]) + y_off
         cv2.rectangle(img, (x1, y1), (x2, y2), color, 2 if has_violation else 1)
 
-        label = f"{word['text']} (95%)"
+        label = f"{word['text']} (100%)"
         draw_label(img, label, x1, y1 - 2, color, 0.3, 1)
 
     # ── 5. Legend bar ──
